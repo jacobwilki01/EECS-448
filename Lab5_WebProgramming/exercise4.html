@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>CSS Manipulation</title>
+        <link rel="stylesheet" type="text/css" href="exercise4.css">
+        <script type="text/javascript">
+            function change_formatting(){
+                var red = document.getElementById("red");
+                var blue = document.getElementById("blue");
+                var green = document.getElementById("green");
+                var width = document.getElementById("width");
+                var red_bg = document.getElementById("red_bg");
+                var blue_bg = document.getElementById("blue_bg");
+                var green_bg = document.getElementById("green_bg");
+                
+                var text = document.getElementById("text");
+                text.style.backgroundColor = rgb(red_bg.value, green_bg.value, blue_bg.value);
+                text.style.borderColor = rgb(red.value, green.value, blue.value);
+                text.style.borderWidth = width.value + "px";
+                }
+        </script>
+    </head>
+    <body>
+        <p id="text">Lorem ipsum dolor sit amet, mea in mundi affert quaerendum, quo iudico ridens copiosae eu. Luptatum atomorum inimicus an vis, populo impedit ea eos, augue intellegam ad mei. Mel omnis libris ex. Debitis suscipit argumentum quo eu. Usu te movet quaeque fabulas, per menandri iracundia posidonium eu. Per meliore deseruisse honestatis ex, mea te diam tota altera.</p>
+        <b>Border Settings:</b>
+        <br>
+        <label for="red">Red Value (in RGB): </label>
+		<input type="number" id="red" name="red" max="255"><br>
+        <label for="green">Green Value (in RGB): </label>
+		<input type="number" id="green" name="green" max="255"><br>
+        <label for="blue">Blue Value (in RGB): </label>
+		<input type="number" id="blue" name="blue" max="255"><br>
+        <label for="width">Width: </label>
+		<input type="text" id="width" name="width"><br>
+        <br>
+        <b>Background Color Settings:</b>
+        <br>
+        <label for="red_bg">Red Value (in RGB): </label>
+		<input type="number" id="red_bg" name="red_bg"><br>
+        <label for="red_bg">Green Value (in RGB): </label>
+		<input type="number" id="red_bg" name="red_bg"><br>
+        <label for="red_bg">Blue Value (in RGB): </label>
+		<input type="number" id="red_bg" name="red_bg"><br>
+        <br>
+        <button type="button" onclick="change_formatting()">Modify Formatting</button>
+    </body>
+</html>

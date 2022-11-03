@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Slide Show!</title>
+		
+	</head>
+	<body>
+		Jacob's Fancy Smancy Slide Show<br><br>
+        <img id="slide" src="images/image1.jpg" height="400" width="200"><br><br>
+		<button type="button" onclick="prev()">Previous</button>
+        <button type="button" onclick="next()">Next</button>
+
+        <script type="text/javascript">
+            const images = ["file:///C:/Users/jwilk/Documents/EECS%20Courses/EECS-448/Lab5_WebProgramming/images/image1.jpg", "file:///C:/Users/jwilk/Documents/EECS%20Courses/EECS-448/Lab5_WebProgramming/images/image2.jpg", "file:///C:/Users/jwilk/Documents/EECS%20Courses/EECS-448/Lab5_WebProgramming/images/image3.jpg", "file:///C:/Users/jwilk/Documents/EECS%20Courses/EECS-448/Lab5_WebProgramming/images/image4.jpg", "file:///C:/Users/jwilk/Documents/EECS%20Courses/EECS-448/Lab5_WebProgramming/images/image5.jpg"];
+            function prev(){
+                var image = document.getElementById("slide");
+                if (images.indexOf(image.src) == 0){
+                    image.src = images[4];
+                } else {
+                    image.src = images[images.indexOf(image.src) - 1];
+                }
+            }
+            function next(){
+                var image = document.getElementById("slide");
+                if (images.indexOf(image.src) == 4){
+                    image.src = images[0];
+                } else {
+                    image.src = images[images.indexOf(image.src) + 1];
+                }
+            }
+        </script>
+	</body>
+</html>

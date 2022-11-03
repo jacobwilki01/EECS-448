@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Password Validator</title>
+		<script type="text/javascript">
+			function validate(){
+    			var pass1 = document.getElementById("pass1").value;
+    			var pass2 = document.getElementById("pass2").value;
+    			if (pass1 != pass2) {
+        			alert("Passwords do not match!");
+    			} else {
+        			if (pass1.length < 8) {
+            			alert("Passwords are less than 8 characters!")
+        			} else {
+            			alert("Passwords validated!")
+        			}
+    			}
+			}
+		</script>
+	</head>
+	<body>
+		Jacob's Fancy Smancy Password Validator<br><br>
+		<label for="pass1">Type your password: </label>
+		<input type="password" id="pass1" name="pass1"><br><br>
+		<label for="pass2">Verify your password: </label>
+		<input type="password" id="pass2" name="pass2"><br><br>
+		<button type="button" onclick="validate()">Validate Passwords</button>
+	</body>
+</html>

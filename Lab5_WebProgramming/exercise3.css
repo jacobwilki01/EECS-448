@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(219, 219, 219);
+}
+p{
+    background-color: rgb(202, 202, 202);
+    font-family: Cambria;
+    font-size: 12pt;
+}
+a:hover {
+    color: red;
+}
+a.youtube {
+    color: green;
+}
