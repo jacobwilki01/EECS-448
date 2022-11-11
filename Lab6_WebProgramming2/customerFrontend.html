@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Exercise 3: Online Shop</title>
+        <style rel="stylesheet" href="style.css"></style>
+    </head>
+    <body>
+        <form action="customerBackend.php" onsubmit="return checkPurchase()">
+            <table width="70%" border="1" align="center">
+                <tr>
+                    <th colspan="4">Jacob's Online Store</th>
+                </tr>
+                <tr>
+                    <td colspan="4" align="center"> Username: <input type="text" id="username" name="username" required> Password: <input type="password" id="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td width="60%"> Kitchen Timer ($15) </td>
+                    <td width="20%"> Quantity: <input type="text" id="item1" name="item1" , style="width:50px" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="60%"> Fancy Laptop ($700) </td>
+                    <td width="20%"> Quantity: <input type="text" id="item2" name="item2" , style="width:50px" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="60%"> Coca-Cola ($3) </td>
+                    <td width="20%"> Quantity: <input type="text" id="item3" name="item3" , style="width:50px" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">Shipping:
+                        <input type="radio" name="shipping" value="Free" checked /> Seven Days (Free)
+                        <input type="radio" name="shipping" value="$5" /> Three Days ($5)
+                        <input type="radio" name="shipping" value="$50" /> Overnight ($50)
+                    </td>
+                </tr>
+            </table>
+
+            <input type="reset" value="Reset" style="margin-left:15%">
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+    <script type="text/javascript" src="formChecker.js"></script>
+</html>
